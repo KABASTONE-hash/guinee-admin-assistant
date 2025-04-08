@@ -53,7 +53,7 @@ Utilise un langage **accessible**, clair et sans jargon technique.
 if go and question.strip():
     with st.spinner("Consultation de l’administration guinéenne…"):
         try:
-            client = openai.OpenAI()
+            client = openai.OpenAI(api_key=openai.api_key)
             response = client.chat.completions.create(
                 model="gpt-3.5-turbo",
                 messages=[
